@@ -18,7 +18,7 @@
       <b>Operit2</b><span class="pill">Preview</span>
     </a>
     <nav class="nav-links">
-      <a href="#arch">架构</a><a href="#flow">流转</a><a href="#security">安全</a><a href="#whitepaper">白皮书</a>
+      <a href="#arch">架构</a><a href="#devices">设备关系</a><a href="#flow">流转</a><a href="#security">安全</a><a href="#whitepaper">白皮书</a>
     </nav>
     <a class="btn btn-sm" href="assets/docs/Operit2技术白皮书.pdf" download>下载白皮书</a>
   </div>
@@ -92,6 +92,39 @@
       </article>
     </div>
     <p class="principle reveal"><b>对等无主从</b> — 节点之间完全对等，不形成固定主从关系。任何一台设备掉线，其余照常协作。</p>
+  </div>
+</section>
+
+<!-- ============ DEVICE GRAPH ============ -->
+<section class="section" id="devices">
+  <div class="wrap">
+    <p class="eyebrow reveal">实时组件 · Live widget</p>
+    <h2 class="reveal">设备关系，长这样</h2>
+    <p class="sub reveal">下面不是截图，也不是示意图——是把 App 里「设置 → 设备空间」那块 Flutter 界面按原代码 1:1 重写的前端实现：同一套轨道、光晕、球体与拓扑，连交互都一样。点一点试试。</p>
+    <div class="graph-card reveal" id="deviceGraph">
+      <div class="graph-head">
+        <div class="graph-title">
+          <svg class="hub" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="2.6"/><circle cx="4.5" cy="6" r="1.6"/><circle cx="19.5" cy="6" r="1.6"/><circle cx="4.5" cy="18" r="1.6"/><circle cx="19.5" cy="18" r="1.6"/><path d="M6 7.2 10 10.4M18 7.2 14 10.4M6 16.8 10 13.6M18 16.8 14 13.6"/></svg>
+          <span class="graph-title-txt">设备关系</span>
+        </div>
+        <div class="graph-stats">
+          <span class="graph-count">5 台设备</span>
+          <span class="online-pill"><i></i><span class="graph-online-n">4 在线</span></span>
+        </div>
+      </div>
+      <div class="graph-stage">
+        <canvas></canvas>
+        <div class="graph-nodes"></div>
+      </div>
+      <div class="graph-foot">
+        <div class="divider"></div>
+        <div class="foot-row">
+          <span class="graph-hint">悬停或点击查看设备 · 点击中心展开拓扑</span>
+          <span class="mode-dots" aria-hidden="true"><i class="on"></i><i></i></span>
+        </div>
+      </div>
+      <div class="graph-details" hidden></div>
+    </div>
   </div>
 </section>
 
@@ -174,11 +207,12 @@
   <div class="wrap">
     <div class="foot-brand"><img src="assets/img/operit-logo.svg" alt="" width="24" height="24"><b>Operit2</b></div>
     <p class="disclaimer">Operit2 目前为预览版：底层结构、数据格式、插件契约与跨设备流程仍可能发生破坏性更新。请勿用于生产环境。</p>
-    <nav class="foot-links"><a href="#arch">架构</a><a href="#flow">流转</a><a href="#security">安全</a><a href="#whitepaper">白皮书</a></nav>
+    <nav class="foot-links"><a href="#arch">架构</a><a href="#devices">设备关系</a><a href="#flow">流转</a><a href="#security">安全</a><a href="#whitepaper">白皮书</a></nav>
     <p class="copy">© 2026 Operit2</p>
   </div>
 </footer>
 
+<script src="assets/js/device-graph.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
