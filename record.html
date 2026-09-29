@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  html,body{margin:0;padding:0;background:#0B0D10;overflow:hidden}
+  #deviceGraph{width:960px}
+  .graph-head,.graph-foot,.graph-details{display:none!important}
+  .graph-stage{position:relative}
+  .graph-stage canvas{display:block;width:100%}
+  .graph-nodes{position:absolute;inset:0}
+  .gnode{position:absolute;left:0;top:0;border-radius:50%;background:transparent;border:0;padding:0}
+</style>
+</head>
+<body>
+<div class="graph-card" id="deviceGraph">
+  <div class="graph-head"><div class="graph-title"><span class="graph-title-txt">设备关系</span></div>
+    <div class="graph-stats"><span class="graph-count"></span><span class="online-pill"><i></i><span class="graph-online-n"></span></span></div></div>
+  <div class="graph-stage"><canvas></canvas><div class="graph-nodes"></div></div>
+  <div class="graph-foot"><div class="divider"></div><div class="foot-row"><span class="graph-hint"></span><span class="mode-dots"><i></i><i></i></span></div></div>
+  <div class="graph-details" hidden></div>
+</div>
+<script src="assets/js/device-graph.js"></script>
+</body>
+</html>
