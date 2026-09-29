@@ -62,8 +62,13 @@ h2{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:800;letter-spacing:-.02em;li
   background:radial-gradient(circle,rgba(47,127,196,.20),transparent 65%);pointer-events:none}
 .dev-scale{--s:.5;position:relative;width:calc(var(--w)*var(--s));height:calc(var(--h)*var(--s));flex:none}
 .dev-scale>.device{position:absolute;left:0;top:0;transform:scale(var(--s));transform-origin:top left}
-.hv-laptop{--w:740px;--h:434px;--s:.68;position:absolute;right:0;top:130px;z-index:1;animation:floaty 7s ease-in-out infinite}
-.hv-phone{--w:428px;--h:868px;--s:.36;position:absolute;left:0;bottom:0;z-index:2;animation:floaty 7s ease-in-out -3.5s infinite}
+/* 真实应用截图 */
+.shot-desk{position:absolute;right:0;top:118px;width:89%;z-index:1;margin:0;border-radius:14px;overflow:hidden;
+  border:1px solid var(--line);box-shadow:0 34px 70px -24px rgba(27,42,65,.30);animation:floaty 7s ease-in-out infinite}
+.shot-desk img{display:block;width:100%;margin-top:-4.6%}
+.shot-mob{position:absolute;left:0;bottom:0;width:27.5%;z-index:2;margin:0;border-radius:26px;overflow:hidden;
+  border:1px solid rgba(15,23,42,.10);box-shadow:0 34px 70px -24px rgba(27,42,65,.40);animation:floaty 7s ease-in-out -3.5s infinite;background:#000}
+.shot-mob img{display:block;width:100%}
 .hv-card{position:absolute;z-index:3;right:26px;top:22px;display:flex;align-items:center;gap:12px;
   background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:16px;
   padding:12px 16px;box-shadow:var(--shadow);font-size:.92rem}
@@ -71,46 +76,12 @@ h2{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:800;letter-spacing:-.02em;li
 .hv-card small{color:var(--muted)}
 .hv-card .check{width:26px;height:26px;border-radius:50%;background:#16A34A;color:#fff;display:flex;
   align-items:center;justify-content:center;font-weight:800;font-size:.85rem}
-.hv-path{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
 @keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -12px}}
 .float-a{animation:floaty 6s ease-in-out infinite}
 
-/* 设备屏幕：浅色 UI（em 随 .device-screen 字号缩放） */
+/* 设备屏幕：仅手表 mock 保留 */
 .device-screen{background:#fff !important;overflow:hidden;font-size:16px;color:var(--ink)}
-.hv-phone .device-screen{font-size:30px}
-.hv-laptop .device-screen{font-size:20px}
-.scr-phone{height:100%;display:flex;flex-direction:column;background:#F6F8FB}
-.scr-appbar{display:flex;align-items:center;gap:.45em;padding:.7em .9em;background:#fff;border-bottom:1px solid var(--line);font-weight:800;font-size:1.02em}
-.scr-appbar em{font-style:normal}
-.scr-chat{flex:1;display:flex;flex-direction:column;gap:.55em;padding:.9em;overflow:hidden}
-.bubble{max-width:88%;padding:.55em .8em;border-radius:1em;font-size:.92em;line-height:1.55}
-.bubble.me{align-self:flex-end;background:var(--brand);color:#fff;border-bottom-right-radius:.3em}
-.bubble.ai{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:.3em}
-.scr-sync{display:flex;align-items:center;gap:.5em;margin:0 .9em .6em;padding:.5em .8em;background:var(--brand-soft);
-  border-radius:.7em;color:var(--brand-deep);font-size:.82em;font-weight:700}
-.pulse{width:.6em;height:.6em;border-radius:50%;background:var(--brand);animation:pulse 1.6s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(47,127,196,.5)}70%{box-shadow:0 0 0 .7em transparent}100%{box-shadow:0 0 0 0 transparent}}
-.scr-input{margin:0 .9em .9em;display:flex;align-items:center;justify-content:space-between;background:#fff;
-  border:1px solid var(--line);border-radius:99px;padding:.55em 1em;color:#9AA3AF;font-size:.85em}
-.scr-input i{font-style:normal;width:1.7em;height:1.7em;border-radius:50%;background:var(--brand);color:#fff;
-  display:flex;align-items:center;justify-content:center;font-size:1em}
-
-.scr-laptop{height:100%;display:flex;flex-direction:column;background:#fff;font-size:1em}
-.scr-winbar{display:flex;align-items:center;gap:.4em;padding:.55em .9em;border-bottom:1px solid var(--line);background:#F6F8FB}
-.scr-winbar span{width:.65em;height:.65em;border-radius:50%;background:#E2E5E9}
-.scr-winbar span:first-child{background:#FF5F57}.scr-winbar span:nth-child(2){background:#FEBC2E}.scr-winbar span:nth-child(3){background:#28C840}
-.scr-winbar em{font-style:normal;margin-left:.5em;color:var(--muted);font-size:.85em;font-weight:600}
-.scr-cols{flex:1;display:flex;min-height:0}
-.scr-side{width:38%;border-right:1px solid var(--line);padding:.9em;background:#FAFBFC}
-.scr-side-t{font-size:.78em;color:var(--muted);font-weight:700;margin-bottom:.6em}
-.scr-task{font-size:.85em;padding:.55em .7em;border-radius:.6em;margin-bottom:.4em;color:var(--muted);background:transparent}
-.scr-task.on{background:var(--brand-soft);color:var(--brand-deep);font-weight:700}
-.scr-main{flex:1;padding:1.1em}
-.scr-main-t{font-weight:800;font-size:1.05em;margin-bottom:.3em}
-.scr-main-s{color:var(--muted);font-size:.85em;margin-bottom:.8em}
-.scr-tags{display:flex;gap:.45em;margin-bottom:1em}
-.scr-tags span{font-size:.78em;font-weight:700;background:#F1F4F7;border-radius:.5em;padding:.3em .7em;color:var(--muted)}
-.scr-btn{border:0;background:var(--brand);color:#fff;font-weight:700;font-size:.9em;padding:.65em 1.4em;border-radius:.7em;cursor:default}
+.step-dev.wa .device-screen{font-size:26px}
 
 /* 跑马灯 */
 .marquee{margin-top:84px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
@@ -138,15 +109,19 @@ h2{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:800;letter-spacing:-.02em;li
 .step{display:grid;grid-template-columns:minmax(300px,430px) 1fr;gap:56px;align-items:center;
   padding:46px 0;border-bottom:1px solid var(--line)}
 .step:nth-child(even) .step-dev{order:2}
+.step:nth-child(even) .step-shot{order:2}
 .step-dev{display:flex;justify-content:center;min-height:200px}
-.step-dev.ph{--w:428px;--h:868px;--s:.36}.step-dev.ph .device-screen{font-size:30px}
-.step-dev.wa{--w:360px;--h:380px;--s:.52}.step-dev.wa .device-screen{font-size:26px}
-.step-dev.lp{--w:740px;--h:434px;--s:.58}.step-dev.lp .device-screen{font-size:20px}
+.step-dev.wa{--w:360px;--h:380px;--s:.52}
+/* 真实截图步骤 */
+.step-shot{margin:0;display:flex;justify-content:center}
+.step-shot.mob img{display:block;width:min(210px,72%);border-radius:24px;border:1px solid rgba(15,23,42,.10);
+  box-shadow:0 30px 60px -25px rgba(27,42,65,.35);background:#000}
+.step-shot.desk{overflow:hidden;border-radius:12px;border:1px solid var(--line);
+  box-shadow:0 30px 60px -25px rgba(27,42,65,.30)}
+.step-shot.desk img{display:block;width:100%;margin-top:-4.6%}
 .step-n{font-family:var(--mono);font-size:.85rem;font-weight:700;color:var(--brand);letter-spacing:.14em}
 .step-txt h3{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;margin:10px 0 12px}
 .step-txt p{color:var(--muted);font-size:1.05rem;max-width:32em}
-.scr-mini{height:100%;display:flex;flex-direction:column;gap:.55em;padding:.9em;background:#F6F8FB;justify-content:center}
-.scr-mini.wide{padding:1.2em}
 .scr-watch{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2em;
   background:#101216;color:#fff;text-align:center}
 .scr-watch p{font-size:1.6em}
@@ -214,15 +189,13 @@ h2{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:800;letter-spacing:-.02em;li
   .section{padding:76px 0}
   .hero{padding-top:124px}
   .hero-visual{height:400px}
-  .hv-laptop{--s:.44;top:118px;right:-6px}
-  .hv-phone{--s:.3;left:0}
+  .shot-desk{top:96px;width:92%}
+  .shot-mob{width:34%}
   .hv-card{left:8px;top:8px;font-size:.85rem;padding:10px 13px}
   .hero-cta .btn{flex:1;justify-content:center;padding:14px 12px}
   .wp-cards{grid-template-columns:1fr}
   .step{padding:44px 0}
-  .step-dev.ph{--s:.28}
   .step-dev.wa{--s:.44}
-  .step-dev.lp{--s:.4}
   .quote-card{padding:28px 24px}
 }
 @media (prefers-reduced-motion:reduce){
