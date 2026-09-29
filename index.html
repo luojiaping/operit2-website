@@ -6,70 +6,52 @@
 <title>Operit2 — 你的 AI，不该被困在一台设备里</title>
 <meta name="description" content="Operit2 是跨平台 AI Agent 基础设施。一句话交代任务，手机、手表、桌面、终端自动接续——进度、记忆与上下文，跟着你走。">
 <link rel="icon" type="image/svg+xml" href="assets/img/operit-logo.svg">
-<meta property="og:title" content="Operit2 — 你的 AI，不该被困在一台设备里">
-<meta property="og:description" content="跨平台 AI Agent 基础设施：一个身份，多设备无缝接续。">
-<meta property="og:type" content="website">
-<link rel="stylesheet" href="assets/vendor/devices.css">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body id="top">
+<body>
 
-<header class="nav" id="nav">
-  <div class="wrap nav-in">
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav-in">
     <a class="brand" href="#top" aria-label="Operit2 首页">
-      <img src="assets/img/operit-logo.svg" alt="Operit2 logo" width="34" height="34">
-      <span class="brand-name">Operit2</span>
-      <span class="badge">Preview</span>
+      <img src="assets/img/operit-logo.svg" alt="" width="30" height="30">
+      <b>Operit2</b><span class="pill">Preview</span>
     </a>
-    <nav class="nav-links" aria-label="主导航">
-      <a href="#arch">架构</a>
-      <a href="#flow">流转</a>
-      <a href="#security">安全</a>
-      <a href="#whitepaper">白皮书</a>
+    <nav class="nav-links">
+      <a href="#arch">架构</a><a href="#flow">流转</a><a href="#security">安全</a><a href="#whitepaper">白皮书</a>
     </nav>
-    <a class="btn btn-primary btn-sm" href="#whitepaper">下载白皮书</a>
+    <a class="btn btn-sm" href="assets/docs/Operit2技术白皮书.pdf" download>下载白皮书</a>
   </div>
 </header>
 
-<main>
+<main id="top">
 <!-- ============ HERO ============ -->
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow reveal">跨平台 AI Agent · Cross-device</p>
-      <h1 class="reveal">你的 AI，<br>不该被困在一台<br>设备里。</h1>
-      <p class="lede reveal">Operit2 是跨平台 AI Agent 基础设施。一句话交代任务，手机、手表、桌面、终端自动接续——进度、记忆与上下文，跟着你走。</p>
-      <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="#whitepaper">下载技术白皮书</a>
-        <a class="btn btn-ghost" href="#arch">了解架构 →</a>
-      </div>
-      <div class="hero-meta reveal">
-        <span><i class="dot"></i>节点对等 · 无主从</span>
-        <span><i class="dot"></i>身份级隔离同步</span>
-      </div>
+  <div class="hero-bg" aria-hidden="true"><div class="beam"></div><div class="grid"></div></div>
+  <div class="wrap hero-in">
+    <a class="announce reveal" href="#flow"><span class="dot"></span>跨平台 AI Agent 基础设施<span class="arr">→</span></a>
+    <h1 class="reveal">你的 AI，<br>不该被困在一台设备里。</h1>
+    <p class="lede reveal">一句话交代任务，手机、手表、桌面、终端自动接续——<br class="br-d">进度、记忆与上下文，跟着你走。</p>
+    <div class="cta-row reveal">
+      <a class="btn btn-primary" href="assets/docs/Operit2技术白皮书.pdf" download>下载技术白皮书</a>
+      <a class="btn btn-ghost" href="#arch">了解架构<span>→</span></a>
     </div>
-    <div class="hero-visual reveal" aria-hidden="true">
-      <div class="glow"></div>
-      <figure class="shot-desk float-a">
-        <img src="assets/img/app-desktop.jpg" alt="Operit 桌面端应用真实界面" loading="eager">
-      </figure>
-      <figure class="shot-mob float-b">
-        <img src="assets/img/app-mobile.png" alt="Operit 手机端应用真实界面" loading="eager">
-      </figure>
-      <div class="hv-card float-a">
-        <img src="assets/img/operit-logo.svg" alt="" width="26" height="26">
-        <div><b>任务已接续</b><small>手机 → 桌面 · 上下文完整</small></div>
-        <span class="check">✓</span>
-      </div>
-    </div>
-  </div>
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-in">
-      <span>手机</span><i>·</i><span>平板</span><i>·</i><span>手表</span><i>·</i><span>桌面</span><i>·</i><span>终端</span><i>·</i><span>一个身份</span><i>·</i><span>无缝接续</span><i>·</i>
-      <span>手机</span><i>·</i><span>平板</span><i>·</i><span>手表</span><i>·</i><span>桌面</span><i>·</i><span>终端</span><i>·</i><span>一个身份</span><i>·</i><span>无缝接续</span><i>·</i>
-    </div>
+    <figure class="hero-shot reveal">
+      <div class="shot-glow" aria-hidden="true"></div>
+      <div class="shot-frame"><img class="shot-main" src="assets/img/app-desktop.jpg" alt="Operit 桌面端应用真实界面" fetchpriority="high"></div>
+      <img class="shot-phone" src="assets/img/app-mobile.png" alt="Operit 手机端应用真实界面" fetchpriority="high">
+      <figcaption class="shot-cap"><span class="pulse"></span>真实应用截图 · 手机与桌面实时同步</figcaption>
+    </figure>
   </div>
 </section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-in">
+    <span>手机</span><i>·</i><span>平板</span><i>·</i><span>手表</span><i>·</i><span>桌面</span><i>·</i><span>终端</span><i>·</i><span>一个身份</span><i>·</i><span>无缝接续</span><i>·</i>
+    <span>手机</span><i>·</i><span>平板</span><i>·</i><span>手表</span><i>·</i><span>桌面</span><i>·</i><span>终端</span><i>·</i><span>一个身份</span><i>·</i><span>无缝接续</span><i>·</i>
+  </div>
+</div>
 
 <!-- ============ ARCH ============ -->
 <section class="section" id="arch">
@@ -80,7 +62,7 @@
     <div class="cards3">
       <article class="card reveal">
         <svg class="diag" viewBox="0 0 120 96" aria-hidden="true">
-          <rect x="30" y="18" width="60" height="60" rx="14" fill="#E8F1FA" stroke="#2F7FC4" stroke-width="2"/>
+          <rect x="30" y="18" width="60" height="60" rx="14" fill="rgba(47,127,196,.10)" stroke="#2F7FC4" stroke-width="2"/>
           <circle cx="60" cy="48" r="9" fill="#2F7FC4"><animate attributeName="r" values="9;11;9" dur="2.4s" repeatCount="indefinite"/></circle>
           <circle cx="60" cy="48" r="18" fill="none" stroke="#2F7FC4" stroke-width="1.5" stroke-dasharray="4 4" opacity=".6"/>
         </svg>
@@ -90,22 +72,19 @@
       </article>
       <article class="card reveal">
         <svg class="diag" viewBox="0 0 120 96" aria-hidden="true">
-          <ellipse cx="60" cy="48" rx="46" ry="30" fill="none" stroke="#2F7FC4" stroke-width="2" stroke-dasharray="8 6"/>
-          <circle cx="40" cy="48" r="7" fill="#2F7FC4"/>
-          <circle cx="62" cy="38" r="7" fill="#2F7FC4" opacity=".65"/>
-          <circle cx="62" cy="60" r="7" fill="#2F7FC4" opacity=".35"/>
-          <path d="M47 44 L55 40 M47 52 L55 56" stroke="#2F7FC4" stroke-width="1.5"/>
+          <ellipse cx="60" cy="48" rx="34" ry="26" fill="none" stroke="#2F7FC4" stroke-width="2" stroke-dasharray="6 5" opacity=".8"/>
+          <circle cx="46" cy="42" r="7" fill="#2F7FC4"/><circle cx="68" cy="38" r="5" fill="#2F7FC4" opacity=".65"/><circle cx="62" cy="60" r="6" fill="#2F7FC4" opacity=".45"/>
         </svg>
         <h3>Space</h3>
         <p class="def">节点成员、路由与持久化同步范围。</p>
-        <p>Space 不是执行容器。它定义哪些节点是一伙的、消息怎么走、哪些数据要持久同步——是协作的"场"，不是干活的"桶"。</p>
+        <p>Space 不是执行容器。它定义哪些节点是一伙的、消息怎么走、哪些数据要持久同步——是协作的“场”，不是干活的“桶”。</p>
       </article>
       <article class="card reveal">
         <svg class="diag" viewBox="0 0 120 96" aria-hidden="true">
-          <rect x="8" y="34" width="44" height="28" rx="8" fill="#E8F1FA" stroke="#2F7FC4" stroke-width="2"/>
-          <rect x="68" y="34" width="44" height="28" rx="8" fill="#fff" stroke="#9AA7B5" stroke-width="2"/>
-          <line x1="60" y1="24" x2="60" y2="72" stroke="#E11D48" stroke-width="2" stroke-dasharray="5 4"/>
-          <path d="M52 48 h16 m0 0 l-5 -5 m5 5 l-5 5" stroke="#E11D48" stroke-width="2" fill="none"/>
+          <rect x="14" y="34" width="38" height="28" rx="8" fill="none" stroke="#2F7FC4" stroke-width="2"/>
+          <rect x="68" y="34" width="38" height="28" rx="8" fill="rgba(47,127,196,.10)" stroke="#2F7FC4" stroke-width="2"/>
+          <line x1="52" y1="30" x2="52" y2="66" stroke="#2F7FC4" stroke-width="2" stroke-dasharray="4 3"/>
+          <path d="M56 48h12m0 0l-4-4m4 4l-4 4" stroke="#2F7FC4" stroke-width="2" fill="none"/>
         </svg>
         <h3>Binding</h3>
         <p class="def">执行权的交接边界。</p>
@@ -117,47 +96,33 @@
 </section>
 
 <!-- ============ FLOW ============ -->
-<section class="section alt" id="flow">
+<section class="section" id="flow">
   <div class="wrap">
-    <p class="eyebrow reveal">流转 · Handoff</p>
+    <p class="eyebrow reveal">流转 · Every surface</p>
     <h2 class="reveal">一个任务，穿行所有设备</h2>
     <p class="sub reveal">发起一次，处处接续。下面是一张机票的旅程，也是 Operit2 日常的样子。</p>
-
-    <div class="steps">
-      <div class="step reveal">
-        <figure class="step-shot mob">
-          <img src="assets/img/app-mobile.png" alt="Operit 手机端真实界面" loading="lazy">
-        </figure>
-        <div class="step-txt"><span class="step-n">01</span><h3>手机发起</h3><p>早高峰的地铁上，随口说一句，任务开始了。语音、文字都行，Agent 听得懂。</p></div>
-      </div>
-      <div class="step reveal">
-        <div class="step-dev dev-scale wa">
-          <div class="device device-apple-watch-s8"><div class="device-frame"><div class="device-screen">
-            <div class="scr-watch"><p>✈</p><b>CA1833</b><small>登机口 B12</small></div>
-          </div></div></div>
+    <div class="bento">
+      <figure class="cell reveal">
+        <div class="cell-shot phone"><img src="assets/img/app-mobile.png" alt="Operit 手机端真实界面" loading="lazy"></div>
+        <figcaption><span class="step-n">01</span><div><b>手机发起</b><p>早高峰的地铁上，随口说一句，任务开始了。语音、文字都行，Agent 听得懂。</p></div></figcaption>
+      </figure>
+      <figure class="cell reveal">
+        <div class="cell-shot watch">
+          <div class="watch"><p>✈</p><b>CA1833</b><small>登机口 B12</small></div>
         </div>
-        <div class="step-txt"><span class="step-n">02</span><h3>手表提醒</h3><p>值机成功、登机口变更、开始登机——重要的事，手腕一震就知道，不用掏手机。</p></div>
-      </div>
-      <div class="step reveal">
-        <figure class="step-shot desk">
-          <img src="assets/img/app-desktop.jpg" alt="Operit 桌面端真实界面" loading="lazy">
-        </figure>
-        <div class="step-txt"><span class="step-n">03</span><h3>桌面继续</h3><p>回到工位打开电脑，刚才的航班列表原样等你。改签、选座，接着来，不用再说一遍。</p></div>
-      </div>
-      <div class="step reveal">
-        <div class="step-dev">
-          <div class="terminal">
-            <div class="term-bar"><span></span><span></span><span></span><em>terminal</em></div>
-            <div class="term-body">
-              <p><span class="p">$</span> operit run 订机票 --to 北京</p>
-              <p class="ok">✓ Space 同步完成 · 4 台设备</p>
-              <p class="ok">✓ CA1833 08:05 已出票</p>
-              <p><span class="p">$</span> <span class="caret">▍</span></p>
-            </div>
-          </div>
+        <figcaption><span class="step-n">02</span><div><b>手表提醒</b><p>值机成功、登机口变更、开始登机——重要的事，手腕一震就知道，不用掏手机。</p></div></figcaption>
+      </figure>
+      <figure class="cell span2 reveal">
+        <div class="cell-shot crop"><img src="assets/img/app-desktop.jpg" alt="Operit 桌面端真实界面" loading="lazy"></div>
+        <figcaption><span class="step-n">03</span><div><b>桌面继续</b><p>回到工位打开电脑，刚才的航班列表原样等你。改签、选座，接着来，不用再说一遍。</p></div></figcaption>
+      </figure>
+      <figure class="cell span2 reveal">
+        <div class="cell-shot term">
+          <div class="terminal"><div class="term-bar"><span></span><span></span><span></span><em>terminal</em></div>
+          <div class="term-body"><p><i>$</i> operit run 订机票 --to 北京</p><p class="ok">✓ Space 同步完成 · 4 台设备</p><p class="ok">✓ CA1833 08:05 已出票</p><p><i>$</i> <span class="caret">▍</span></p></div></div>
         </div>
-        <div class="step-txt"><span class="step-n">04</span><h3>终端收尾</h3><p>出票、报销、归档，脚本在终端自动跑完，结果回传到每台设备。任务闭环。</p></div>
-      </div>
+        <figcaption><span class="step-n">04</span><div><b>终端收尾</b><p>出票、报销、归档，脚本在终端自动跑完，结果回传到每台设备。任务闭环。</p></div></figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -170,37 +135,33 @@
       <h2 class="reveal">能力越大，<br>边界越清楚</h2>
       <p class="sub reveal">Agent 能替你做事，也必须处处留痕、事事可控。四层防线，一层都不能少。</p>
       <ol class="layers">
-        <li class="reveal"><b>01 · App 运行环境隔离</b><span>每个 App 只在自己的沙盒里活动，碰不到别人的数据。</span></li>
-        <li class="reveal"><b>02 · Host 系统授权</b><span>要调用系统能力，先过宿主平台的授权。</span></li>
-        <li class="reveal"><b>03 · AI 能力模式</b><span>Agent 能做什么，由能力模式事先圈定范围。</span></li>
-        <li class="reveal"><b>04 · 工具调用批准</b><span>敏感操作逐次确认，绝不悄悄执行。</span></li>
+        <li class="reveal"><b>01 · App 运行环境隔离</b><p>每个 App 只在自己的沙盒里活动，碰不到别人的数据。</p></li>
+        <li class="reveal"><b>02 · Host 系统授权</b><p>要调用系统能力，先过宿主平台的授权。</p></li>
+        <li class="reveal"><b>03 · AI 能力模式</b><p>Agent 能做什么，由能力模式事先圈定范围。</p></li>
+        <li class="reveal"><b>04 · 工具调用批准</b><p>敏感操作逐次确认，绝不悄悄执行。</p></li>
       </ol>
     </div>
     <aside class="quote-card reveal">
-      <p class="q-label">身份同步原则</p>
-      <blockquote>身份是本地顶层隔离单位：每个身份名下的聊天、配置与工作区，只在同一身份下、你亲手配对的设备之间同步。身份本身不进入设备间同步，也不会通过 Link 传播——换一个身份，就像换了一个保险柜。</blockquote>
-      <p class="q-note">同步清单（与白皮书一致）：同一身份下的 Agent、聊天、消息、记忆、工具结果、配置与 Binding 由 Space 持久化同步；私钥、配对密钥、本机状态留在本地，从不上传。</p>
+      <p class="q-eyebrow">身份同步原则</p>
+      <p class="q-main">身份是本地顶层隔离单位：每个身份名下的聊天、配置与工作区，只在同一身份下、你亲手配对的设备之间同步。身份本身不进入设备间同步，也不会通过 Link 传播——换一个身份，就像换了一个保险柜。</p>
+      <p class="q-sub">同步清单（与白皮书一致）：同一身份下的 Agent、聊天、消息、记忆、工具结果、配置与 Binding 由 Space 持久化同步；私钥、配对密钥、本机状态留在本地，从不上传。</p>
     </aside>
   </div>
 </section>
 
 <!-- ============ WHITEPAPER ============ -->
-<section class="section alt" id="whitepaper">
-  <div class="wrap wp-center">
+<section class="section" id="whitepaper">
+  <div class="wrap center">
     <p class="eyebrow reveal">白皮书 · Whitepaper</p>
     <h2 class="reveal">想看细节？都在这里</h2>
     <p class="sub reveal">架构、同步协议、安全模型的完整论述，中英双语。</p>
     <div class="wp-cards">
-      <article class="card wp-card reveal">
-        <p class="wp-lang">中文版</p>
-        <h3>Operit2 技术白皮书</h3>
-        <p class="wp-meta">PDF · 861 KB</p>
+      <article class="wp-card reveal">
+        <p class="wp-lang">中文版</p><h3>Operit2 技术白皮书</h3><p class="wp-meta">PDF · 861 KB</p>
         <a class="btn btn-primary" href="assets/docs/Operit2技术白皮书.pdf" download>下载 PDF</a>
       </article>
-      <article class="card wp-card reveal">
-        <p class="wp-lang">English</p>
-        <h3>Operit2 Technical Whitepaper</h3>
-        <p class="wp-meta">PDF · 2.6 MB</p>
+      <article class="wp-card reveal">
+        <p class="wp-lang">English</p><h3>Operit2 Technical Whitepaper</h3><p class="wp-meta">PDF · 2.6 MB</p>
         <a class="btn btn-primary" href="assets/docs/Operit2-Technical-Whitepaper.pdf" download>Download PDF</a>
       </article>
     </div>
@@ -208,16 +169,12 @@
 </section>
 </main>
 
+<!-- ============ FOOTER ============ -->
 <footer class="footer">
-  <div class="wrap foot-in">
-    <div class="foot-brand">
-      <img src="assets/img/operit-logo.svg" alt="Operit2 logo" width="30" height="30">
-      <b>Operit2</b>
-    </div>
+  <div class="wrap">
+    <div class="foot-brand"><img src="assets/img/operit-logo.svg" alt="" width="24" height="24"><b>Operit2</b></div>
     <p class="disclaimer">Operit2 目前为预览版：底层结构、数据格式、插件契约与跨设备流程仍可能发生破坏性更新。请勿用于生产环境。</p>
-    <nav class="foot-links" aria-label="页脚导航">
-      <a href="#arch">架构</a><a href="#flow">流转</a><a href="#security">安全</a><a href="#whitepaper">白皮书</a>
-    </nav>
+    <nav class="foot-links"><a href="#arch">架构</a><a href="#flow">流转</a><a href="#security">安全</a><a href="#whitepaper">白皮书</a></nav>
     <p class="copy">© 2026 Operit2</p>
   </div>
 </footer>
